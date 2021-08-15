@@ -159,7 +159,6 @@ public class Task5 {
 
     @AfterMethod
     public void postconditions() {
-
         driver.quit();
     }
 }
