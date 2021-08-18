@@ -26,8 +26,12 @@ public class Task6 {
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
         Assert.assertEquals(driver.findElement(By.xpath("//div[contains(@class,'name')]")).getText(), "Sauce Labs Backpack");
         Assert.assertEquals(driver.findElement(By.xpath("//div[@id='cart_contents_container']//descendant::div[@class='inventory_item_price']")).getText(), "$29.99");
+        Assert.assertTrue(driver.findElement(By.xpath("//div[@id='root']//descendant::button[5]")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//span[@class='shopping_cart_badge']//ancestor::a[@class='shopping_cart_link']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//img[@class='back-image']//parent::button[@class='btn btn_secondary back btn_medium']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//div[@class='header_secondary_container']//child::span[@class='title']")).isDisplayed());
     }
-
+    
     @AfterMethod
     public void postconditions() {
         driver.quit();
