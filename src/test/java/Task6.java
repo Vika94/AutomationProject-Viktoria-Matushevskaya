@@ -18,7 +18,8 @@ public class Task6 {
 
     @Test
     public void test1() {
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
+       // driver.findElement(By.id("user-name")).sendKeys("standard_user");
+        driver.findElement(By.cssSelector("#user-name")).sendKeys("standard_user");
         driver.findElement(By.name("password")).sendKeys("secret_sauce");
         driver.findElement(By.className("submit-button")).click();
         driver.findElement(By.xpath("//a[@id='item_4_title_link']/div[@class='inventory_item_name']")).click();
@@ -30,8 +31,14 @@ public class Task6 {
         Assert.assertTrue(driver.findElement(By.xpath("//span[@class='shopping_cart_badge']//ancestor::a[@class='shopping_cart_link']")).isDisplayed());
         Assert.assertTrue(driver.findElement(By.xpath("//img[@class='back-image']//parent::button[@class='btn btn_secondary back btn_medium']")).isDisplayed());
         Assert.assertTrue(driver.findElement(By.xpath("//div[@class='header_secondary_container']//child::span[@class='title']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector("a[class^='shopping']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector("div[class$='logo']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector("button[class*='back']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector("[class='title']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector("[class~=btn_small]")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector("div > span")).isDisplayed());
     }
-    
+
     @AfterMethod
     public void postconditions() {
         driver.quit();
