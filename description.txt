@@ -4,3 +4,5 @@ git push origin develop
 git branch task_1
 git checkout task_1
 git push origin task_1
+git add description.txt
+git commit -m "added new file"
