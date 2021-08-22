@@ -6,3 +6,6 @@ git checkout task_1
 git push origin task_1
 git add description.txt
 git commit -m "added new file"
+git add description.txt
+git commit -m "edited new file"
+git push --set-upstream origin task_1
