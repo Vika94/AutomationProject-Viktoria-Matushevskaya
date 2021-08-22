@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class GoogleTest {
     @Test
     public void test1() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
+      WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.google.by/");
         driver.findElement(By.name("q")).sendKeys("Привет МИР", Keys.ENTER);
