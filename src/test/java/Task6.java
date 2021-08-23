@@ -17,7 +17,7 @@ public class Task6 {
     }
 
     @Test
-    public void test1() {
+    public void test() {
        // driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.cssSelector("#user-name")).sendKeys("standard_user");
         driver.findElement(By.name("password")).sendKeys("secret_sauce");
