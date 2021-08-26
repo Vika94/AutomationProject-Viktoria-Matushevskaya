@@ -25,6 +25,13 @@ public class Task8 {
 
     @Test
     public void test1() {
+        List<String> textList = new ArrayList<>();
+        driver.findElements(By.cssSelector(".brand")).forEach((data) -> {
+            textList.add(data.getText());
+        });
+        for (String data1 : textList) {
+            System.out.println(data1);
+        }
         driver.findElement(By.id("fname")).sendKeys("Виктория");
         driver.findElement(By.id("b")).click();
         Select select = new Select(driver.findElement(By.name("cars")));
@@ -33,14 +40,7 @@ public class Task8 {
         Assert.assertTrue(driver.findElement(By.xpath("//*[@src='123.jpg']")).isDisplayed());
         Assert.assertEquals(driver.findElement(By.xpath("//p")).getText(), "Select the desired car-brand below");
         driver.findElement(By.xpath("//a")).click();
-        Assert.assertEquals(driver.findElement(By.id("navbtn_tutorials")).getText(),"Tutorials");
-        List<String> textList = new ArrayList<String>();
-        driver.findElements(By.cssSelector(".brand")).forEach((data) -> {
-            textList.add(data.getText());
-        });
-        for (String data1 : textList) {
-            System.out.println(data1);
-        }
+        Assert.assertEquals(driver.findElement(By.id("navbtn_tutorials")).getText(), "Tutorials");
     }
 
     @AfterMethod
