@@ -27,9 +27,7 @@ public class BasePage {
     }
 
     protected void displayElements(By element) {
-        List<WebElement> elements = new ArrayList<>();
         driver.findElements(element).forEach((data) -> {
-            elements.add(data);
             Assert.assertTrue(data.isDisplayed());
         });
     }
