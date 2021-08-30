@@ -1,14 +1,7 @@
 package Pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static driver.CreateDriver.*;
 
 public class ProductsPage extends BasePage {
     private By addToCart = By.id("add-to-cart-sauce-labs-backpack");
@@ -19,7 +12,7 @@ public class ProductsPage extends BasePage {
     private By image = By.xpath("//*[@alt='Sauce Labs Backpack']");
     private By logo = By.className("app_logo");
 
-    WebDriver driver = getDriver();
+
 
     public ProductsPage displayThePrice() {
         displayElements(this.prices);

@@ -1,17 +1,16 @@
 package Pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import static driver.CreateDriver.*;
+
 
 public class LoginPage extends BasePage {
     private By username = By.id("user-name");
     private By password = By.id("password");
     private By loginButton = By.id("login-button");
-    private By errorText = By.xpath("//h3");
-    WebDriver driver = getDriver();
+    private By errorText = By.tagName("h3");
+
 
     public LoginPage openPage() {
         driver.get("https://www.saucedemo.com/");

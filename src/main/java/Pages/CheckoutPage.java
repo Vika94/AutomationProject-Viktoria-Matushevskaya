@@ -1,12 +1,9 @@
 package Pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import javax.swing.*;
 
-import static driver.CreateDriver.getDriver;
 
 public class CheckoutPage extends BasePage {
     private By firstName = By.id("first-name");
@@ -19,7 +16,6 @@ public class CheckoutPage extends BasePage {
     private By textAfterOrder = By.className("complete-text");
     private By backHome = By.id("back-to-products");
 
-    WebDriver driver = getDriver();
 
     public CheckoutPage displayCancelButton() {
         displayElement(this.cancelButton);

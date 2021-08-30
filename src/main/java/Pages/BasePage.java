@@ -8,7 +8,7 @@ import org.testng.Assert;
 import java.util.ArrayList;
 import java.util.List;
 
-import static driver.CreateDriver.*;
+import static driver.CreateDriver.getDriver;
 
 public class BasePage {
     WebDriver driver = getDriver();
@@ -30,8 +30,7 @@ public class BasePage {
         List<WebElement> elements = new ArrayList<>();
         driver.findElements(element).forEach((data) -> {
             elements.add(data);
-            int i = 0;
-            Assert.assertTrue(elements.get(i).isDisplayed());
+            Assert.assertTrue(data.isDisplayed());
         });
     }
 

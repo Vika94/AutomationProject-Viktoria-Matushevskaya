@@ -1,9 +1,7 @@
 package Pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
-import static driver.CreateDriver.getDriver;
 
 public class CartPage extends BasePage {
     private By remove = By.id("remove-sauce-labs-backpack");
@@ -12,7 +10,6 @@ public class CartPage extends BasePage {
     private By pageName = By.className("title");
     private By product = By.className("inventory_item_name");
 
-    WebDriver driver = getDriver();
 
     public CartPage displayPageName() {
         displayElement(this.pageName);

@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class CreateDriver {
 
-    private static WebDriver driver;
+    protected static WebDriver driver;
 
     public static WebDriver getDriver() {
         if (driver == null) {
