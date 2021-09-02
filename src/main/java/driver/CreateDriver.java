@@ -14,6 +14,14 @@ public class CreateDriver {
         }
         return driver;
     }
+
+    public static void quitDriver(){
+        if (driver!=null){
+            driver.close();
+            driver.quit();
+            driver = null;
+        }
+    }
 }
 /*
     Patten Singleton

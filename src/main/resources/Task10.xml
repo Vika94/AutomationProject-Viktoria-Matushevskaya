@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://trstng.org/testng-1.0.dtd">
+<suite name="Pages">
+<test name="loginToApplication1">
+    <parameter name="username" value="123"></parameter>
+    <parameter name="password" value="secret_sauce"></parameter>
+        <parameter name="errorText" value="Epic sadface: Username and password do not match any user in this service"></parameter>
+    <classes>
+        <class name="Task10"></class>
+    </classes>
+</test>
+    <test name="loginToApplication2">
+        <parameter name="username" value="locked_out_user"></parameter>
+        <parameter name="password" value="secret_sauce"></parameter>
+        <parameter name="errorText" value="Epic sadface: Sorry, this user has been locked out."></parameter>
+        <classes>
+            <class name="Task10"></class>
+        </classes>
+    </test>
+    <test name="loginToApplication3">
+        <classes>
+            <class name="Task10"></class>
+        </classes>
+    </test>
+    <test name="testingMenuPage">
+        <classes>
+            <class name="Task10"></class>
+        </classes>
+    </test>
+</suite>

@@ -5,6 +5,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import static driver.CreateDriver.getDriver;
+import static driver.CreateDriver.quitDriver;
 
 public class BaseTest {
     public static WebDriver driver;
@@ -16,6 +17,6 @@ public class BaseTest {
 
     @AfterTest
     public void closeDriver() {
-        driver.quit();
+        quitDriver();
     }
 }
