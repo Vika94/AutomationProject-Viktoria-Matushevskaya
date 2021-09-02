@@ -24,18 +24,22 @@ public class Task10 extends BaseTest {
 
     @Parameters({"username", "password", "errorText"})
     @Test
-    public void loginToApplication_Test(@Optional("standard_user") String username,@Optional("secret_sauce") String password,@Optional("") String errorText) {
+    public void loginToApplication_Test(@Optional("standard_user") String username, @Optional("secret_sauce") String password, @Optional("") String errorText) {
         loginPage.enterUsername(username)
                 .enterPassword(password)
                 .clickLogin();
         if (errorText.isEmpty()) {
             productsPage.displayLogo();
-        }else
+        } else
             loginPage.checkingErrorText(errorText); //Fluent / Chain of Invocations
     }
 
+    @Parameters({"username", "password"})
     @Test
-    public void testingMenuPage_Test5() throws InterruptedException {
+    public void testingMenuPage_Test5(String username, String password) throws InterruptedException {
+        loginPage.enterUsername(username)
+                .enterPassword(password)
+                .clickLogin();
         menuPage.clickMenu();
         Thread.sleep(5000);
         menuPage.displayAllItems()
@@ -44,4 +48,55 @@ public class Task10 extends BaseTest {
                 .displayResetAppState();
     }
 
+    @Parameters({"username", "password"})
+    @Test
+    public void testingProductPage_Test3(String username, String password) {
+        loginPage.enterUsername(username)
+                .enterPassword(password)
+                .clickLogin();
+        productsPage.displayThePrice()
+                .displayDescriptions()
+                .displayProductNames()
+                .displayImage()
+                .displayLogo()
+                .clickAddToCart()
+                .clickBasket();
+    }
+
+    @Parameters({"username", "password"})
+    @Test
+    public void testingCartPage_Test4(String username, String password) {
+        loginPage.enterUsername(username)
+                .enterPassword(password)
+                .clickLogin();
+        productsPage.clickAddToCart();
+        productsPage.clickBasket();
+        cartPage.displayProductInCartPage()
+                .displayPageName()
+                .clickRemove()
+                .clickContinueShopping();
+        productsPage.clickAddToCart().clickBasket();
+        cartPage.clickCheckout();
+    }
+
+    @Parameters({"username", "password","firstname","lastname","zipCode","text"})
+    @Test(priority = 7)
+    public void testingCheckoutPage_Test5(String username, String password, String firstname, String lastname, String zipCode, String text) {
+        loginPage.enterUsername(username)
+                .enterPassword(password)
+                .clickLogin();
+        productsPage.clickAddToCart();
+        productsPage.clickBasket();
+        cartPage.clickCheckout();
+        checkoutPage.displayCancelButton()
+                .displayPageName()
+                .enterFirstName(firstname)
+                .enterLastName(lastname)
+                .enterZipCode(zipCode)
+                .clickContinueButton()
+                .clickFinish()
+                .checkingTextAfterOrder(text)
+                .clickBackHome();
+        productsPage.displayProductNames();
+    }
 }
