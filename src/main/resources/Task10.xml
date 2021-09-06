@@ -34,40 +34,43 @@
             </class>
         </classes>
     </test>
-    <test name="testingMenuPage">
+    <test name="testingMenuPage" enabled="true">
         <parameter name="username" value="standard_user"></parameter>
         <parameter name="password" value="secret_sauce"></parameter>
         <classes>
             <class name="Task10">
                 <methods>
+                    <include name="loginToApplication_Test"/>
                     <include name="testingMenuPage_Test5"/>
                 </methods>
             </class>
         </classes>
     </test>
-    <test name="testingProductPage">
+    <test name="testingProductPage" enabled="true">
         <parameter name="username" value="standard_user"></parameter>
         <parameter name="password" value="secret_sauce"></parameter>
         <classes>
             <class name="Task10">
                 <methods>
+                    <include name="loginToApplication_Test"/>
                     <include name="testingProductPage_Test3"/>
                 </methods>
             </class>
         </classes>
     </test>
-    <test name="testingCartPage">
+    <test name="testingCartPage" enabled="true">
         <parameter name="username" value="standard_user"></parameter>
         <parameter name="password" value="secret_sauce"></parameter>
         <classes>
             <class name="Task10">
                 <methods>
+                    <include name="loginToApplication_Test"/>
                     <include name="testingCartPage_Test4"/>
                 </methods>
             </class>
         </classes>
     </test>
-    <test name="testingChickoutPage">
+    <test name="testingChickoutPage" enabled="true">
         <parameter name="username" value="standard_user"></parameter>
         <parameter name="password" value="secret_sauce"></parameter>
         <parameter name="firstname" value="Viktoria"></parameter>
@@ -77,6 +80,7 @@
         <classes>
             <class name="Task10">
                 <methods>
+                    <include name="loginToApplication_Test"/>
                     <include name="testingCheckoutPage_Test5"/>
                 </methods>
             </class>

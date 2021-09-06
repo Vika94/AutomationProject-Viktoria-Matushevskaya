@@ -30,6 +30,12 @@ public class MenuPage extends BasePage {
         displayElement(this.logout);
         return this;
     }
+    public MenuPage clickLogout() {
+        click(this.logout);
+        return this;
+    }
+
+
 
     public MenuPage displayResetAppState() {
         displayElement(this.resetAppState);

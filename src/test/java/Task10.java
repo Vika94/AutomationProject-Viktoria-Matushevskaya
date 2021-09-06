@@ -37,9 +37,6 @@ public class Task10 extends BaseTest {
     @Parameters({"username", "password"})
     @Test
     public void testingMenuPage_Test5(String username, String password) throws InterruptedException {
-        loginPage.enterUsername(username)
-                .enterPassword(password)
-                .clickLogin();
         menuPage.clickMenu();
         Thread.sleep(5000);
         menuPage.displayAllItems()
@@ -51,9 +48,6 @@ public class Task10 extends BaseTest {
     @Parameters({"username", "password"})
     @Test
     public void testingProductPage_Test3(String username, String password) {
-        loginPage.enterUsername(username)
-                .enterPassword(password)
-                .clickLogin();
         productsPage.displayThePrice()
                 .displayDescriptions()
                 .displayProductNames()
@@ -66,9 +60,6 @@ public class Task10 extends BaseTest {
     @Parameters({"username", "password"})
     @Test
     public void testingCartPage_Test4(String username, String password) {
-        loginPage.enterUsername(username)
-                .enterPassword(password)
-                .clickLogin();
         productsPage.clickAddToCart();
         productsPage.clickBasket();
         cartPage.displayProductInCartPage()
@@ -79,12 +70,9 @@ public class Task10 extends BaseTest {
         cartPage.clickCheckout();
     }
 
-    @Parameters({"username", "password","firstname","lastname","zipCode","text"})
-    @Test(priority = 7)
+    @Parameters({"username", "password", "firstname", "lastname", "zipCode", "text"})
+    @Test
     public void testingCheckoutPage_Test5(String username, String password, String firstname, String lastname, String zipCode, String text) {
-        loginPage.enterUsername(username)
-                .enterPassword(password)
-                .clickLogin();
         productsPage.clickAddToCart();
         productsPage.clickBasket();
         cartPage.clickCheckout();

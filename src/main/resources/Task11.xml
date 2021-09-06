@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://trstng.org/testng-1.0.dtd">
+<suite name="Pages">
+    <test name="loginToApplication">
+        <classes>
+            <class name="Task11.Task11_1">
+            </class>
+        </classes>
+</test>
+    <test name="addProductInBasket">
+        <classes>
+            <class name="Task11.Task11_2">
+                <methods>
+                    <include name="loginToApplication"/>
+                    <include name="addAndDeleteProductInBasket"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="sortProducts">
+        <classes>
+            <class name="Task11.Task11_3">
+                <methods>
+                    <include name="loginToApplication"/>
+                    <include name="sortProducts"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
