@@ -4,6 +4,9 @@ import Pages.LoginPage;
 import Pages.MenuPage;
 import Pages.ProductsPage;
 import driver.BaseTest;
+import io.qameta.allure.Description;
+import io.qameta.allure.Link;
+import io.qameta.allure.Step;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -34,6 +37,9 @@ public class Task11_1 extends BaseTest {
         };
     }
 
+    @Link("https://www.saucedemo.com/")
+    @Description("Login to application")
+    @Step("Verification of application login details")
     @Test(dataProvider = "Данные для входа в приложение")
     public void loginToApplication(String username, String password, String errorText) throws InterruptedException {
         loginPage.enterUsername(username)

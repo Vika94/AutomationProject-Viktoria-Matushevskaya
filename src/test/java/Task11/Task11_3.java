@@ -5,14 +5,21 @@ import Pages.LinksEnum;
 import Pages.LoginPage;
 import Pages.ProductsPage;
 import driver.BaseTest;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import driver.Listener;
+import io.qameta.allure.Attachment;
+import io.qameta.allure.Description;
+import io.qameta.allure.Step;
+import org.openqa.selenium.*;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+import static driver.CreateDriver.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Listeners(Listener.class)
 public class Task11_3 extends BaseTest {
     LoginPage loginPage;
     ProductsPage productsPage;
@@ -26,6 +33,7 @@ public class Task11_3 extends BaseTest {
         loginPage.openPage();
     }
 
+    @Step("Login to application and add products in basket for checking sort products")
     @Test
     public void loginToApplication() throws InterruptedException {
         loginPage.enterUsername("standard_user")
@@ -35,8 +43,16 @@ public class Task11_3 extends BaseTest {
         productsPage.clickBasket();
     }
 
+    @Step("Checking sort alphabet products in basket")
+    @Description("Sort products in basket")
     @Test
     public void sortProducts() {
         cartPage.sortProductsInBasket();
+    }
+
+    @Step("Checking screenshot fail test")
+    @Test
+    public void failTest() {
+        productsPage.clickAddToCart();
     }
 }

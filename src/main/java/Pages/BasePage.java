@@ -32,6 +32,12 @@ public class BasePage {
         });
     }
 
+    protected void notDisplayProductInCartPage(By element) {
+       Assert.assertTrue(driver.findElements(element).isEmpty());
+    }
+
+
+
     protected void displayElement(By element) {
         Assert.assertTrue(driver.findElement(element).isDisplayed());
 

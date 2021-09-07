@@ -23,6 +23,7 @@
                 <methods>
                     <include name="loginToApplication"/>
                     <include name="sortProducts"/>
+                    <include name="failTest"/>
                 </methods>
             </class>
         </classes>

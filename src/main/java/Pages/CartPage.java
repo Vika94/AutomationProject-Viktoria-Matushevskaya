@@ -30,12 +30,17 @@ public class CartPage extends BasePage {
     public CartPage sortProductsInBasket(){
         List<String> list = new ArrayList<>();
         driver.findElements(this.productsInBasket).forEach(data -> list.add(data.getText()));
-        Assert.assertEquals(list.stream().sorted().collect(Collectors.toList()),"[Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Bolt T-Shirt, Sauce Labs Fleece Jacket]");
+        Assert.assertEquals(list.stream().sorted().collect(Collectors.toList()), Arrays.asList("Sauce Labs Backpack", "Sauce Labs Bike Light", "Sauce Labs Bolt T-Shirt", "Sauce Labs Fleece Jacket"));
         return this;
     }
 
     public CartPage displayProductInCartPage() {
         displayElement(this.product);
+        return this;
+    }
+
+    public CartPage notDisplayProductInCartPage() {
+        notDisplayProductInCartPage(this.product);
         return this;
     }
 
