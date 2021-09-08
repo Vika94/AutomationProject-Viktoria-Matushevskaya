@@ -1,6 +1,7 @@
-package Pages;
+package Pages.Saucedemo;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import java.util.ArrayList;
@@ -21,6 +22,10 @@ public class CartPage extends BasePage {
     private By sauceLabsBoltTShirt = By.xpath("(//*[@class='inventory_item_name'])[3]");
     private By sauceLabsFleeceJacket = By.xpath("(//*[@class='inventory_item_name'])[4]");
 
+    public CartPage(WebDriver driver) {
+        super(driver);
+    }
+
 
     public CartPage displayPageName() {
         displayElement(this.pageName);
@@ -40,7 +45,7 @@ public class CartPage extends BasePage {
     }
 
     public CartPage notDisplayProductInCartPage() {
-        notDisplayProductInCartPage(this.product);
+        notDisplay(this.product);
         return this;
     }
 

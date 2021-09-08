@@ -1,4 +1,4 @@
-import Pages.*;
+import Pages.Saucedemo.*;
 import driver.BaseTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
@@ -14,11 +14,11 @@ public class Task10 extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-        loginPage = new LoginPage();
-        productsPage = new ProductsPage();
-        cartPage = new CartPage();
-        checkoutPage = new CheckoutPage();
-        menuPage = new MenuPage();
+        loginPage = new LoginPage(driver);
+        productsPage = new ProductsPage(driver);
+        cartPage = new CartPage(driver);
+        checkoutPage = new CheckoutPage(driver);
+        menuPage = new MenuPage(driver);
         loginPage.openPage();
     }
 

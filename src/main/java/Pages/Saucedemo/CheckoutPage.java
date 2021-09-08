@@ -1,6 +1,7 @@
-package Pages;
+package Pages.Saucedemo;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 
@@ -15,6 +16,10 @@ public class CheckoutPage extends BasePage {
     private By finish = By.id("finish");
     private By textAfterOrder = By.className("complete-text");
     private By backHome = By.id("back-to-products");
+
+    public CheckoutPage(WebDriver driver) {
+        super(driver);
+    }
 
 
     public CheckoutPage displayCancelButton() {

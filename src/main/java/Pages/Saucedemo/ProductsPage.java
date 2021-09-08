@@ -1,6 +1,7 @@
-package Pages;
+package Pages.Saucedemo;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 
 public class ProductsPage extends BasePage {
@@ -16,6 +17,9 @@ public class ProductsPage extends BasePage {
     private By logo = By.className("app_logo");
     private By remove = By.id("remove-sauce-labs-backpack");
 
+    public ProductsPage(WebDriver driver) {
+        super(driver);
+    }
 
 
     public ProductsPage displayThePrice() {

@@ -1,8 +1,10 @@
-package Pages;
+package Pages.Saucedemo;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.util.ArrayList;
@@ -11,7 +13,15 @@ import java.util.List;
 import static driver.CreateDriver.getDriver;
 
 public class BasePage {
-    WebDriver driver = getDriver();
+    protected WebDriver driver;
+    protected WebDriverWait wait;
+    protected Actions actions;
+
+    protected BasePage(WebDriver driver){
+        this.driver = driver;
+        wait = new WebDriverWait(driver,20);
+        actions = new Actions(driver);
+    }
 
     protected void enter(By element, CharSequence... charSequences) {
         driver.findElement(element).clear();
@@ -32,14 +42,26 @@ public class BasePage {
         });
     }
 
-    protected void notDisplayProductInCartPage(By element) {
-       Assert.assertTrue(driver.findElements(element).isEmpty());
+    protected void isDisplayed(By... elements) {
+        for (By element : elements) {
+            Assert.assertFalse(driver.findElements(element).isEmpty(), "Element :: " + elements + " is not exist.");
+        }
     }
 
-
+    protected void notDisplay(By element) {
+       Assert.assertTrue(driver.findElements(element).isEmpty());
+    }
 
     protected void displayElement(By element) {
         Assert.assertTrue(driver.findElement(element).isDisplayed());
 
+    }
+
+    public void pause(Integer seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

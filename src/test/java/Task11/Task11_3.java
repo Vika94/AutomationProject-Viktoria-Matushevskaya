@@ -1,23 +1,15 @@
 package Task11;
 
-import Pages.CartPage;
-import Pages.LinksEnum;
-import Pages.LoginPage;
-import Pages.ProductsPage;
+import Pages.Saucedemo.CartPage;
+import Pages.Saucedemo.LoginPage;
+import Pages.Saucedemo.ProductsPage;
 import driver.BaseTest;
 import driver.Listener;
-import io.qameta.allure.Attachment;
 import io.qameta.allure.Description;
 import io.qameta.allure.Step;
-import org.openqa.selenium.*;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
-import static driver.CreateDriver.*;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Listeners(Listener.class)
 public class Task11_3 extends BaseTest {
@@ -27,9 +19,9 @@ public class Task11_3 extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-        loginPage = new LoginPage();
-        productsPage = new ProductsPage();
-        cartPage = new CartPage();
+        loginPage = new LoginPage(driver);
+        productsPage = new ProductsPage(driver);
+        cartPage = new CartPage(driver);
         loginPage.openPage();
     }
 

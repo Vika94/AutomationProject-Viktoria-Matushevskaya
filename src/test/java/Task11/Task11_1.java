@@ -1,8 +1,8 @@
 package Task11;
 
-import Pages.LoginPage;
-import Pages.MenuPage;
-import Pages.ProductsPage;
+import Pages.Saucedemo.LoginPage;
+import Pages.Saucedemo.MenuPage;
+import Pages.Saucedemo.ProductsPage;
 import driver.BaseTest;
 import io.qameta.allure.Description;
 import io.qameta.allure.Link;
@@ -11,8 +11,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.awt.*;
-
 public class Task11_1 extends BaseTest {
     LoginPage loginPage;
     ProductsPage productsPage;
@@ -20,9 +18,9 @@ public class Task11_1 extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-        loginPage = new LoginPage();
-        productsPage = new ProductsPage();
-        menuPage = new MenuPage();
+        loginPage = new LoginPage(driver);
+        productsPage = new ProductsPage(driver);
+        menuPage = new MenuPage(driver);
         loginPage.openPage();
     }
 
