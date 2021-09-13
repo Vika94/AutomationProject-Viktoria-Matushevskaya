@@ -4,7 +4,7 @@ import Pages.Saucedemo.CartPage;
 import Pages.Saucedemo.LoginPage;
 import Pages.Saucedemo.ProductsPage;
 import driver.BaseTest;
-import driver.Listener;
+import testng.Listener;
 import io.qameta.allure.Description;
 import io.qameta.allure.Step;
 import org.testng.annotations.BeforeClass;

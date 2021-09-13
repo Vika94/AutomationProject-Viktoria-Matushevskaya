@@ -1,12 +1,10 @@
 package Pages.Herokuapp;
 
-import Pages.Saucedemo.BasePage;
+import Pages.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import java.util.Arrays;
-
-import static driver.CreateDriver.getDriver;
 
 public class HomePage extends BasePage {
 
@@ -22,7 +20,7 @@ public class HomePage extends BasePage {
     }
 
     public HomePage openPage(){
-        driver.get("https://the-internet.herokuapp.com/");
+        open();
         return this;
     }
 

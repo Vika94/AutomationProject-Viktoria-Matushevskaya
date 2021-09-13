@@ -25,11 +25,11 @@ public class DynamicControls_Test extends BaseTest {
     public void DynamicControls_Test(){
         dynamicControls.verifyPageTitle()
                 .clickRemoveBtn()
-                .verifyElementText("It's gone!")
+                .verifyElementText()
                 .notDisplayBtn()
                 .checkingDisabledInput()
                 .clickEnableBtn()
-                .verifyEnableText("It's enabled!")
+                .verifyEnableText()
                 .checkingEnableInput();
     }
 }

@@ -1,6 +1,6 @@
 package Pages.Herokuapp;
 
-import Pages.Saucedemo.BasePage;
+import Pages.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -29,15 +29,29 @@ public class DynamicControls extends BasePage {
         return this;
     }
 
-    public DynamicControls verifyElementText(String text) {
+    public DynamicControls verifyElementText() {
+        wait.until(ExpectedConditions.textToBe(textBack, appProperties.getProperties().getProperty("verifyElementText")));
+        return this;
+    }
+
+    public DynamicControls verifyEnableText() {
+        wait.until(ExpectedConditions.textToBe(enableText, appProperties.getProperties().getProperty("verifyEnableText")));
+        return this;
+    }
+
+   /* public DynamicControls verifyElementText(String text) {
         wait.until(ExpectedConditions.textToBe(textBack, text));
         return this;
     }
+
+
 
     public DynamicControls verifyEnableText(String text) {
         wait.until(ExpectedConditions.textToBe(enableText, text));
         return this;
     }
+
+    */
 
     public DynamicControls notDisplayBtn () {
        notDisplay(removeBtn);

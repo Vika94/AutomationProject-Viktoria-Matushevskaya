@@ -3,9 +3,7 @@ package Task12;
 import Pages.Herokuapp.ContextMenu;
 import Pages.Herokuapp.HomePage;
 import Pages.Herokuapp.HomePageEnum;
-import Pages.Saucedemo.BasePage;
 import driver.BaseTest;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 

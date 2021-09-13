@@ -1,26 +1,32 @@
-package Pages.Saucedemo;
+package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static driver.CreateDriver.getDriver;
+import properties.PropertyReader;
 
 public class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected Actions actions;
+    protected PropertyReader appProperties;
 
     protected BasePage(WebDriver driver){
         this.driver = driver;
         wait = new WebDriverWait(driver,20);
         actions = new Actions(driver);
+        appProperties = new PropertyReader("config.properties");
+
+    }
+
+    protected void open(){
+        driver.get(appProperties.getProperties().getProperty("url"));
+    }
+
+    protected void open (String url){
+        driver.get(url);
     }
 
     protected void enter(By element, CharSequence... charSequences) {

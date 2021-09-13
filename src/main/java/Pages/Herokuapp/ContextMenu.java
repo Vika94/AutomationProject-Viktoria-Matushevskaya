@@ -1,12 +1,10 @@
 package Pages.Herokuapp;
 
-import Pages.Saucedemo.BasePage;
+import Pages.BasePage;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-
-import static driver.CreateDriver.getDriver;
 
 public class ContextMenu extends BasePage {
 
@@ -25,8 +23,18 @@ public class ContextMenu extends BasePage {
     public ContextMenu verifyAlertText(){
         actions.contextClick(driver.findElement(hotSpot)).perform();
         Alert alert = driver.switchTo().alert();
+        Assert.assertEquals(alert.getText(), appProperties.getProperties().getProperty("verifyAlertText"));
+        alert.accept();
+        return this;
+    }
+
+  /*  public ContextMenu verifyAlertText(){
+        actions.contextClick(driver.findElement(hotSpot)).perform();
+        Alert alert = driver.switchTo().alert();
         Assert.assertEquals(alert.getText(), "You selected a context menu");
         alert.accept();
         return this;
     }
+
+   */
 }
