@@ -1,6 +1,8 @@
 package Pages.Saucedemo;
 
 import Pages.BasePage;
+import Pages.Herokuapp.HomePage;
+import Pages.Herokuapp.HomePageEnum;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -26,7 +28,6 @@ public class CartPage extends BasePage {
     public CartPage(WebDriver driver) {
         super(driver);
     }
-
 
     public CartPage displayPageName() {
         displayElement(this.pageName);

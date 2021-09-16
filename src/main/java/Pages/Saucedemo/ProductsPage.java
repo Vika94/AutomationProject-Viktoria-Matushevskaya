@@ -1,8 +1,16 @@
 package Pages.Saucedemo;
 
 import Pages.BasePage;
+import Pages.Herokuapp.HomePageEnum;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 public class ProductsPage extends BasePage {
@@ -17,6 +25,53 @@ public class ProductsPage extends BasePage {
     private By image = By.xpath("//*[@alt='Sauce Labs Backpack']");
     private By logo = By.className("app_logo");
     private By remove = By.id("remove-sauce-labs-backpack");
+    private By sort = By.cssSelector(".product_sort_container");
+
+    private By getLink(LinksEnum linksEnum) {
+        return linksEnum.getElement();
+    }
+
+    public ProductsPage clickLink(LinksEnum linksEnum) {
+        click(getLink(linksEnum));
+        return this;
+    }
+
+    public ProductsPage sortProductsAToZ(){
+        List<String> list = new ArrayList<>();
+        driver.findElements(this.productNames).forEach(data -> list.add(data.getText()));
+        Assert.assertEquals(list.stream().sorted().collect(Collectors.toList()), Arrays.asList("Sauce Labs Backpack", "Sauce Labs Bike Light", "Sauce Labs Bolt T-Shirt", "Sauce Labs Fleece Jacket", "Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"));
+        return this;
+    }
+
+    public ProductsPage sortProductsZToA(){
+        List<String> list = new ArrayList<>();
+        driver.findElements(this.productNames).forEach(data -> list.add(data.getText()));
+        list.stream().sorted().collect(Collectors.toList());
+        Assert.assertEquals(list.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList()), Arrays.asList("Test.allTheThings() T-Shirt (Red)", "Sauce Labs Onesie", "Sauce Labs Fleece Jacket", "Sauce Labs Bolt T-Shirt", "Sauce Labs Bike Light","Sauce Labs Backpack"));
+        return this;
+    }
+
+    public ProductsPage sortProductsPriceLowToHigh(){
+        List<String> list = new ArrayList<>();
+        driver.findElements(this.prices).forEach(data -> list.add(data.getText()));
+        list.stream()
+                .map(el->el.replace("$",""))
+                .map(Double::parseDouble)
+                .sorted().collect(Collectors.toList());
+        Assert.assertEquals(list,Arrays.asList("$7.99","$9.99","$15.99","$15.99","$29.99","$49.99"));
+        return this;
+    }
+
+    public ProductsPage sortProductsPriceHighToLow(){
+        List<String> list = new ArrayList<>();
+        driver.findElements(this.prices).forEach(data -> list.add(data.getText()));
+        list.stream()
+                .map(el->el.replace("$",""))
+                .map(Double::parseDouble)
+                .sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+        Assert.assertEquals(list,Arrays.asList("$49.99","$29.99","$15.99","$15.99","$9.99","$7.99"));
+        return this;
+    }
 
     public ProductsPage(WebDriver driver) {
         super(driver);

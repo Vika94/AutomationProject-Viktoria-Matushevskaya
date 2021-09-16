@@ -9,7 +9,7 @@ public enum LinksEnum {
     PRICEHIGHTOLOW(By.xpath("//*[text()='Price (high to low)']"));
 
 
-    private By element;
+    protected By element;
 
     LinksEnum(By element) {
         this.element = element;

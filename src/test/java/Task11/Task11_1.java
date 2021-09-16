@@ -7,16 +7,14 @@ import driver.BaseTest;
 import io.qameta.allure.Description;
 import io.qameta.allure.Link;
 import io.qameta.allure.Step;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class Task11_1 extends BaseTest {
     LoginPage loginPage;
     ProductsPage productsPage;
     MenuPage menuPage;
 
-    @BeforeClass
+    @BeforeMethod
     public void precondition() {
         loginPage = new LoginPage(driver);
         productsPage = new ProductsPage(driver);

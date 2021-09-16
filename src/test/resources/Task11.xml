@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://trstng.org/testng-1.0.dtd">
-<suite name="Pages">
+<suite name="Pages" parallel="tests" thread-count="3">
     <test name="loginToApplication">
         <classes>
             <class name="Task11.Task11_1">
@@ -13,6 +13,7 @@
                 <methods>
                     <include name="loginToApplication"/>
                     <include name="addAndDeleteProductInBasket"/>
+                    <include name="sortProducts"/>
                 </methods>
             </class>
         </classes>
