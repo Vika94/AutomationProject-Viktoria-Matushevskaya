@@ -1,8 +1,6 @@
-package Pages.Saucedemo;
+package PageObject.Saucedemo;
 
-import Pages.BasePage;
-import Pages.Herokuapp.HomePage;
-import Pages.Herokuapp.HomePageEnum;
+import PageObject.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;

@@ -1,9 +1,8 @@
 package Task12;
 
-import Pages.Herokuapp.ContextMenu;
-import Pages.Herokuapp.DynamicControls;
-import Pages.Herokuapp.HomePage;
-import Pages.Herokuapp.HomePageEnum;
+import PageObject.Herokuapp.DynamicControls;
+import PageObject.Herokuapp.HomePage;
+import PageObject.Herokuapp.HomePageEnum;
 import driver.BaseTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;

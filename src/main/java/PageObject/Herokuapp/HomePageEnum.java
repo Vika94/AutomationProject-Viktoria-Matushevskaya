@@ -1,4 +1,4 @@
-package Pages.Herokuapp;
+package PageObject.Herokuapp;
 
 public enum HomePageEnum {
     CONTEXT_MENU("Context Menu"),

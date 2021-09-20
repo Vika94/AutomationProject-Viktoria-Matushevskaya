@@ -1,8 +1,8 @@
 package Task11;
 
-import Pages.Saucedemo.LoginPage;
-import Pages.Saucedemo.MenuPage;
-import Pages.Saucedemo.ProductsPage;
+import PageObject.Saucedemo.LoginPage;
+import PageObject.Saucedemo.MenuPage;
+import PageObject.Saucedemo.ProductsPage;
 import driver.BaseTest;
 import io.qameta.allure.Description;
 import io.qameta.allure.Link;
@@ -14,7 +14,7 @@ public class Task11_1 extends BaseTest {
     ProductsPage productsPage;
     MenuPage menuPage;
 
-    @BeforeMethod
+    @BeforeClass
     public void precondition() {
         loginPage = new LoginPage(driver);
         productsPage = new ProductsPage(driver);

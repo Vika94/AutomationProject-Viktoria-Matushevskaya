@@ -1,10 +1,9 @@
 package Task11;
 
-import Pages.Saucedemo.CartPage;
-import Pages.Saucedemo.LoginPage;
-import Pages.Saucedemo.ProductsPage;
+import PageObject.Saucedemo.CartPage;
+import PageObject.Saucedemo.LoginPage;
+import PageObject.Saucedemo.ProductsPage;
 import driver.BaseTest;
-import org.testng.annotations.BeforeMethod;
 import testng.Listener;
 import io.qameta.allure.Description;
 import io.qameta.allure.Step;
@@ -18,7 +17,7 @@ public class Task11_3 extends BaseTest {
     ProductsPage productsPage;
     CartPage cartPage;
 
-    @BeforeMethod
+    @BeforeClass
     public void precondition() {
         loginPage = new LoginPage(driver);
         productsPage = new ProductsPage(driver);

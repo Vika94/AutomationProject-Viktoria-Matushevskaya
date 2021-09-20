@@ -1,10 +1,7 @@
 package Task12;
 
 
-import Pages.Herokuapp.HomePage;
-import Pages.Saucedemo.CartPage;
-import Pages.Saucedemo.LoginPage;
-import Pages.Saucedemo.ProductsPage;
+import PageObject.Herokuapp.HomePage;
 import driver.BaseTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;

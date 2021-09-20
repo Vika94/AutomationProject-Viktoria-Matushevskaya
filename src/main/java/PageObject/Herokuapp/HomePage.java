@@ -1,6 +1,6 @@
-package Pages.Herokuapp;
+package PageObject.Herokuapp;
 
-import Pages.BasePage;
+import PageObject.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
