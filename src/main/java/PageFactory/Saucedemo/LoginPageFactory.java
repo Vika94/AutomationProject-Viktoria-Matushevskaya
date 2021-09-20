@@ -1,6 +1,6 @@
-package PageFactory;
+package PageFactory.Saucedemo;
 
-import PageFactory.ValueObject.LoginValueObject;
+import Pattern.ValueObject.Saucedemo;
 import PageObject.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,12 +34,12 @@ public class LoginPageFactory extends BasePage {
         return this;
     }
 
-    public LoginPageFactory enterUsername(LoginValueObject loginValueObject) {
+    public LoginPageFactory enterUsername(Saucedemo loginValueObject) {
         this.userName.sendKeys(loginValueObject.getUserName());
         return this;
     }
 
-    public LoginPageFactory enterPassword(LoginValueObject loginValueObject) {
+    public LoginPageFactory enterPassword(Saucedemo loginValueObject) {
         this.password.sendKeys(loginValueObject.getPassword());
         return this;
     }
@@ -49,11 +49,9 @@ public class LoginPageFactory extends BasePage {
         return this;
     }
 
-    public LoginPageFactory checkingErrorText(LoginValueObject loginValueObject) {
+    public LoginPageFactory checkingErrorText(Saucedemo loginValueObject) {
         Assert.assertEquals(this.errorText.getText(), loginValueObject.getErrorText());
         return this;
     }
-
-
 }
 

@@ -1,11 +1,11 @@
-package PageFactory.ValueObject;
+package Pattern.ValueObject;
 
-public class LoginValueObject {
+public class Saucedemo {
     private String userName;
     private String password;
     private String errorText;
 
-    public LoginValueObject() {
+    public Saucedemo() {
 
     }
 

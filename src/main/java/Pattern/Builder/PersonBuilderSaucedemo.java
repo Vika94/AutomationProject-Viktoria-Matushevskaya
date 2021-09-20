@@ -1,7 +1,9 @@
-package PageFactory.Builder;
+package Pattern.Builder;
 
-public class PersonBuilder {
+public class PersonBuilderSaucedemo {
     private String firstName;
+    private String lastName;
+    private String zipCode;
 
     public String getFirstName() {
         return firstName;
@@ -15,14 +17,12 @@ public class PersonBuilder {
         return zipCode;
     }
 
-    private String lastName;
-    private String zipCode;
 
     public static class Builder{
-        private PersonBuilder personBuilder;
+        private PersonBuilderSaucedemo personBuilder;
 
         public Builder() {
-             personBuilder = new PersonBuilder();
+             personBuilder = new PersonBuilderSaucedemo();
         }
 
         public Builder withFirstName(String firstName){
@@ -40,7 +40,7 @@ public class PersonBuilder {
             return this;
         }
 
-        public PersonBuilder build(){
+        public PersonBuilderSaucedemo build(){
             return personBuilder;
         }
 

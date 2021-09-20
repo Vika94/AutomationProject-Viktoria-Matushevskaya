@@ -1,20 +1,13 @@
-package PageFactory;
+package PageFactory.Saucedemo;
 
 import PageObject.BasePage;
-import PageObject.Saucedemo.LinksEnum;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
-import org.openqa.selenium.support.How;
 import org.testng.Assert;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.openqa.selenium.support.PageFactory.initElements;
 

@@ -1,10 +1,7 @@
-package PageFactory;
+package PageFactory.Saucedemo;
 
-import PageFactory.Builder.PersonBuilder;
+import Pattern.Builder.PersonBuilderSaucedemo;
 import PageObject.BasePage;
-import PageObject.Saucedemo.CartPage;
-import PageObject.Saucedemo.CheckoutPage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -40,7 +37,7 @@ public class CheckoutPageFactory extends BasePage {
         return this;
     }
 
-    public CheckoutPageFactory enterYourInformation(PersonBuilder personBuilder) {
+    public CheckoutPageFactory enterYourInformation(PersonBuilderSaucedemo personBuilder) {
         this.firstName.sendKeys(personBuilder.getFirstName());
         this.lastName.sendKeys(personBuilder.getLastName());
         this.zipCode.sendKeys(personBuilder.getZipCode());
