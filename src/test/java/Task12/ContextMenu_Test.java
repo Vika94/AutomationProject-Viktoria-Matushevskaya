@@ -1,8 +1,8 @@
 package Task12;
 
-import PageObject.Herokuapp.ContextMenu;
-import PageObject.Herokuapp.HomePage;
-import PageObject.Herokuapp.HomePageEnum;
+import pageObject.herokuapp.ContextMenu;
+import pageObject.herokuapp.HomePage;
+import pageObject.herokuapp.HomePageEnum;
 import driver.BaseTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -14,8 +14,8 @@ public class ContextMenu_Test extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-        contextMenu = new ContextMenu(driver);
-        homePage = new HomePage(driver);
+        contextMenu = new ContextMenu();
+        homePage = new HomePage();
         homePage.clickLink(HomePageEnum.CONTEXT_MENU);
 
     }

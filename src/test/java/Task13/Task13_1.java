@@ -1,10 +1,10 @@
 package Task13;
 
-import Pattern.Builder.PersonBuilderSaucedemo;
-import PageFactory.Saucedemo.CheckoutPageFactory;
-import PageFactory.Saucedemo.LoginPageFactory;
-import Pattern.ValueObject.Saucedemo;
-import PageFactory.Saucedemo.ProductsPageFactory;
+import pattern.builder.PersonBuilderSaucedemo;
+import pageFactory.saucedemo.CheckoutPageFactory;
+import pageFactory.saucedemo.LoginPageFactory;
+import pattern.valueObject.Saucedemo;
+import pageFactory.saucedemo.ProductsPageFactory;
 import driver.BaseTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;

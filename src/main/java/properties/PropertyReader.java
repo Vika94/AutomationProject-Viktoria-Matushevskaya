@@ -15,7 +15,7 @@ public class PropertyReader {
         return properties;
     }
 
-    public Properties getProperties(String name){
+    public Properties getProperties(String name) {
         Properties properties = new Properties();
         try {
             properties.load(getClass().getClassLoader().getResourceAsStream(name));
@@ -24,6 +24,4 @@ public class PropertyReader {
         }
         return properties;
     }
-
-
 }

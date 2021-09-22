@@ -1,8 +1,8 @@
 package Task12;
 
-import PageObject.Herokuapp.DynamicControls;
-import PageObject.Herokuapp.HomePage;
-import PageObject.Herokuapp.HomePageEnum;
+import pageObject.herokuapp.DynamicControls;
+import pageObject.herokuapp.HomePage;
+import pageObject.herokuapp.HomePageEnum;
 import driver.BaseTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -14,8 +14,8 @@ public class DynamicControls_Test extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-        dynamicControls = new DynamicControls(driver);
-        homePage = new HomePage(driver);
+        dynamicControls = new DynamicControls();
+        homePage = new HomePage();
         homePage.clickLink(HomePageEnum.DYNAMIC_CONTROLS);
 
     }

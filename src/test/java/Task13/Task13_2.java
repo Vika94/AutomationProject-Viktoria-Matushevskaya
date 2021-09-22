@@ -1,9 +1,9 @@
 package Task13;
 
-import Pattern.Builder.LoginBuilderHerokuapp;
-import PageFactory.Herokuapp.LoginPageBuilder;
-import PageFactory.Herokuapp.LoginPageValue;
-import Pattern.ValueObject.Herokuapp;
+import pattern.builder.LoginBuilderHerokuapp;
+import pageFactory.herokuapp.LoginPageBuilder;
+import pageFactory.herokuapp.LoginPageValue;
+import pattern.valueObject.Herokuapp;
 import driver.BaseTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;

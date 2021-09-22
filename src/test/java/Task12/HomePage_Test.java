@@ -1,7 +1,7 @@
 package Task12;
 
 
-import PageObject.Herokuapp.HomePage;
+import pageObject.herokuapp.HomePage;
 import driver.BaseTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -12,7 +12,7 @@ public class HomePage_Test extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-        homePage = new HomePage(driver);
+        homePage = new HomePage();
     }
 
     @Test

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://trstng.org/testng-1.0.dtd">
-<suite name="PageFactory">
+<suite name="pageFactory">
     <test name="loginToApplicationSaucedemo">
         <classes>
             <class name="Task13.Task13_1">

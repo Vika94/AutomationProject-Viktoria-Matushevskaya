@@ -1,9 +1,9 @@
 package Task11;
 
-import PageObject.Saucedemo.CartPage;
-import PageObject.Saucedemo.LinksEnum;
-import PageObject.Saucedemo.LoginPage;
-import PageObject.Saucedemo.ProductsPage;
+import pageObject.saucedemo.CartPage;
+import pageObject.saucedemo.LinksEnum;
+import pageObject.saucedemo.LoginPage;
+import pageObject.saucedemo.ProductsPage;
 import driver.BaseTest;
 import io.qameta.allure.Description;
 import io.qameta.allure.Step;
@@ -17,9 +17,9 @@ public class Task11_2 extends BaseTest {
 
     @BeforeClass
     public void precondition() {
-        loginPage = new LoginPage(driver);
-        productsPage = new ProductsPage(driver);
-        cartPage = new CartPage(driver);
+        loginPage = new LoginPage();
+        productsPage = new ProductsPage();
+        cartPage = new CartPage();
         loginPage.openPage();
     }
 
