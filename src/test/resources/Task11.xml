@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://trstng.org/testng-1.0.dtd">
 <suite name="pageObject" parallel="tests" thread-count="3">
+    <parameter name="browser" value="Chrome"></parameter>
     <test name="loginToApplication">
         <classes>
             <class name="Task11.Task11_1">

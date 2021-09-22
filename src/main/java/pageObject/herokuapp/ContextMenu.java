@@ -18,7 +18,7 @@ public class ContextMenu extends BasePage {
     public ContextMenu verifyAlertText() {
         actions.contextClick(driver.findElement(hotSpot)).perform();
         Alert alert = driver.switchTo().alert();
-        Assert.assertEquals(alert.getText(), appProperties.getProperties().getProperty("verifyAlertText"));
+        Assert.assertEquals(alert.getText(), properties.getProperty("verifyAlertText"));
         alert.accept();
         return this;
     }

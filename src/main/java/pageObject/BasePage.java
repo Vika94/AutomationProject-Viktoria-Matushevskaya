@@ -8,23 +8,26 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import properties.PropertyReader;
+
+import java.util.Properties;
+
 @Log4j2
 public class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected Actions actions;
-    protected PropertyReader appProperties;
+    protected Properties properties;
 
     protected BasePage(){
         this.driver = CreateDriver.getDriver();
         wait = new WebDriverWait(driver,20);
         actions = new Actions(driver);
-        appProperties = new PropertyReader("config.properties");
+        properties = PropertyReader.getProperties();
 
     }
 
     protected void open(){
-        driver.get(appProperties.getProperties().getProperty("url"));
+        open(properties.getProperty("url"));
     }
 
     protected void open (String url){

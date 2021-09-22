@@ -1,22 +1,39 @@
 package driver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import properties.PropertyReader;
 
 import java.util.concurrent.TimeUnit;
 
 public class CreateDriver {
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-   //protected static WebDriver driver;
+    public static void setDriver(String browserType){
+        createDriver(browserType);
+
+    }
+
+    private static void createDriver(String browserType){
+        switch (browserType){
+            case "Chrome":
+                WebDriverManager.chromedriver().setup();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments(PropertyReader.getProperties().getProperty("chrome.driver.options").split(";"));
+                driver.set(new ChromeDriver(chromeOptions));
+                break;
+            case "Mozilla":
+                WebDriverManager.firefoxdriver().setup();
+                break;
+            case "IE":
+                WebDriverManager.iedriver().setup();
+                break;
+        }
+    }
 
     public static WebDriver getDriver() {
-        if (driver.get() == null) {
-            WebDriver webDriver = new ChromeDriver();
-            webDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-            webDriver.manage().window().maximize();
-            driver.set(webDriver);
-        }
         return driver.get();
     }
 

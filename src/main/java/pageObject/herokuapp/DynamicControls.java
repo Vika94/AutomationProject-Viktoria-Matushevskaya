@@ -24,12 +24,12 @@ public class DynamicControls extends BasePage {
     }
 
     public DynamicControls verifyElementText() {
-        wait.until(ExpectedConditions.textToBe(textBack, appProperties.getProperties().getProperty("verifyElementText")));
+        wait.until(ExpectedConditions.textToBe(textBack,properties.getProperty("verifyElementText")));
         return this;
     }
 
     public DynamicControls verifyEnableText() {
-        wait.until(ExpectedConditions.textToBe(enableText, appProperties.getProperties().getProperty("verifyEnableText")));
+        wait.until(ExpectedConditions.textToBe(enableText, properties.getProperty("verifyEnableText")));
         return this;
     }
 
