@@ -1,14 +1,12 @@
 package driver;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
+import testng.Listener;
 
 import static driver.CreateDriver.getDriver;
 import static driver.CreateDriver.quitDriver;
-
+@Listeners(Listener.class)
 public class BaseTest {
     public static WebDriver driver;
 
