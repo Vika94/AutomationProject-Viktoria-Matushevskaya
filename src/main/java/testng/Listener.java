@@ -2,11 +2,8 @@ package testng;
 
 import driver.CreateDriver;
 import io.qameta.allure.Attachment;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
-import org.testng.ITestResult;
 import properties.PropertyReader;
 
 import java.io.File;
@@ -16,7 +13,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Comparator;
 
-import static driver.CreateDriver.*;
+import static driver.CreateDriver.setDriver;
 
 public class Listener implements ITestListener {
 
