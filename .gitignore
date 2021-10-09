@@ -25,3 +25,4 @@ hs_err_pid*
 .idea
 chromedriver.exe
 allure-results
+build
