@@ -16,7 +16,8 @@ The following dependencies in Dependencies have newer versions:
 
 ### **-Команда для запуска testng.xml файла**
 
-(Предварительно прописав ![img_8.png](img_8.png)конфигурации в  pom.xml файле)
+(Предварительно прописав 
+конфигурации в  pom.xml файле)
 
 ### **mvn clean test**
 
