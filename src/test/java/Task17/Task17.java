@@ -13,7 +13,8 @@ public class Task17 {
     @Description("Select inquiry")
     @Test
     public void test1() {
-        getSelect().select("*").from("user").where("id = 0").getListData().forEach(System.out::println);
+        String id = System.getProperty("userid");
+        getSelect().select("*").from("user").where(String.format("id = %s", id)).getListData().forEach(System.out::println);
     }
 
     @Test
