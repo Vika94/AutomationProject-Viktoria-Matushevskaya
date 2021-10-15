@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://trstng.org/testng-1.0.dtd">
+<suite name="pageFactory">
+    <test name="loginToApplicationSaucedemo">
+        <classes>
+            <class name="Task13.Task13_1">
+                <methods>
+                    <include name="loginToApplication_Test1"/>
+                    <include name="testingProductPage_Test2"/>
+                    <include name="testingCheckoutPage_Test3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="loginToApplicationHerokuapp">
+        <classes>
+            <class name="Task13.Task13_2">
+                <methods>
+                    <include name="loginToApplication_Test1"/>
+                    <include name="loginToApplicationNegative_Test2"/>
+                    <include name="loginToApplication_Test"/>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+        </suite>

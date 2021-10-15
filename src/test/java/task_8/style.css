@@ -1,0 +1,21 @@
+h1 {
+   text-align: center;
+   border: 2px solid powderblue;
+   padding: 50px;
+   color: blue;
+   font-family: verdana;
+   }
+h2 {
+   padding: 10px;
+   color: purple;
+   }
+table, th, td {
+  border:1px solid pink;
+   }
+p {
+background-color: gray;
+font-family: courier;
+padding: 40px;
+  }
+button {color: red;
+   }

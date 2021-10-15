@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://trstng.org/testng-1.0.dtd">
+<suite name="lombok">
+    <parameter name="env" value="herokuapp"></parameter>
+    <parameter name="browser" value="Chrome"></parameter>
+    <test name="loginToApplicationSaucedemo">
+        <classes>
+            <class name="Task14.Task14">
+                <methods>
+                    <include name="loginToApplication_Test1"/>
+                    <include name="testingProductPage_Test2"/>
+                    <include name="testingCheckoutPage_Test3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

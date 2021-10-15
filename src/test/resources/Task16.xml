@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://trstng.org/testng-1.0.dtd">
+<suite name="MoodPanda">
+    <test name="Tests">
+        <classes>
+            <class name="Task16.Task16">
+            </class>
+        </classes>
+    </test>
+</suite>
