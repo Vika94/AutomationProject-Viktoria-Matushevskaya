@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE suite SYSTEM "http://trstng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "https://trstng.org/testng-1.0.dtd">
 <suite name="Welcome to the-internet">
     <test name="Context Menu Test">
         <classes>

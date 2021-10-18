@@ -19,7 +19,12 @@ public class Task17 {
 
     @Test
     public void test2() {
-        getSelect().select("*").from("user").where("age = '32' and first_name = 'User 2'").getListData().forEach(System.out::println);
+        getSelect()
+                .select("*")
+                .from("user")
+                .where("age = '32' and first_name = 'User 2'")
+                .getListData()
+                .forEach(System.out::println);
     }
 
     @Description("Insert inquiry")
