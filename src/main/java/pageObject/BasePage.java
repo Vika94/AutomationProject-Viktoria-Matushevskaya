@@ -23,7 +23,6 @@ public class BasePage {
         wait = new WebDriverWait(driver,20);
         actions = new Actions(driver);
         properties = PropertyReader.getProperties();
-
     }
 
     protected void open(){

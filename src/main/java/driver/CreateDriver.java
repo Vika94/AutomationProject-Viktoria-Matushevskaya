@@ -18,13 +18,13 @@ public class CreateDriver {
     }
 
     public static void createDriver() {
-        if (PropertyReader.getProperties().containsKey("chrome")) {
+        if (PropertyReader.getProperties().containsKey("chrome.driver.options")) {
             WebDriverManager.chromedriver().setup();
             ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.addArguments(PropertyReader.getProperties().getProperty("chrome").split(";"));
+            chromeOptions.addArguments(PropertyReader.getProperties().getProperty("chrome.driver.options").split(";"));
             WebDriver webDriver = new ChromeDriver(chromeOptions);
             driver.set(webDriver);
-        } else if (PropertyReader.getProperties().containsKey("mozilla")) {
+        } else if (PropertyReader.getProperties().containsKey("mozilla.driver.options")) {
             WebDriverManager.firefoxdriver().setup();
             driver.set(new FirefoxDriver());
         } else {
@@ -45,8 +45,8 @@ public class CreateDriver {
         }
     }
 }
-/*
-    Patten Singleton
+
+/* - for Selenium
  */
 
 

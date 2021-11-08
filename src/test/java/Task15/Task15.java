@@ -7,7 +7,10 @@ import Task15.listResource.ListResource;
 import Task15.listUsers.ListUsers;
 import Task15.singleResource.SingleResource;
 import Task15.singleUser.SingleUser;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
@@ -188,4 +191,18 @@ public class Task15 {
         }
         return "";
     }
+
+    Gson gson = new Gson();
+
+    @BeforeTest
+    public void preconditions() throws JsonProcessingException {
+        baseURI = "https://www.onliner.by";
+        String endpoint = "/sdapi/catalog.api/search/notebook";
+        String  json = given().when().get(endpoint).asPrettyString();
+        JsonObject jsonObject = gson.fromJson(json, JsonObject.class);
+        jsonObject.get("products").getAsJsonArray().forEach(name-> System.out.println(name.getAsJsonObject().get("extended_name")));
+
+
+    }
+
 }

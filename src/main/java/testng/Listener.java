@@ -31,6 +31,7 @@ public class Listener implements ITestListener {
     public void onStart(ITestContext context) {
         PropertyReader propertyReader = new PropertyReader();
         propertyReader.setProperties(context.getSuite().getParameter("env") == null ? System.getProperties().getProperty("env") : context.getSuite().getParameter("env"));
+        // CreateDriver.createDriver(); //-for Selenium
         new SelenideConfigurations(propertyReader);
         clearTestsResults();
     }

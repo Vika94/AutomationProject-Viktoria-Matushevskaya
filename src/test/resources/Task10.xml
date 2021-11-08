@@ -6,7 +6,7 @@
     <parameter name="password" value="secret_sauce"></parameter>
         <parameter name="errorText" value="Epic sadface: Username and password do not match any user in this service"></parameter>
     <classes>
-        <class name="Task10">
+        <class name="Task10.Task10">
             <methods>
                 <include name="loginToApplication_Test"/>
             </methods>
@@ -18,7 +18,7 @@
         <parameter name="password" value="secret_sauce"></parameter>
         <parameter name="errorText" value="Epic sadface: Sorry, this user has been locked out."></parameter>
         <classes>
-            <class name="Task10">
+            <class name="Task10.Task10">
                 <methods>
                     <include name="loginToApplication_Test"/>
                 </methods>
@@ -27,7 +27,7 @@
     </test>
     <test name="loginToApplication3">
         <classes>
-            <class name="Task10">
+            <class name="Task10.Task10">
                 <methods>
                     <include name="loginToApplication_Test"/>
                 </methods>
@@ -38,7 +38,7 @@
         <parameter name="username" value="standard_user"></parameter>
         <parameter name="password" value="secret_sauce"></parameter>
         <classes>
-            <class name="Task10">
+            <class name="Task10.Task10">
                 <methods>
                     <include name="loginToApplication_Test"/>
                     <include name="testingMenuPage_Test5"/>
@@ -50,7 +50,7 @@
         <parameter name="username" value="standard_user"></parameter>
         <parameter name="password" value="secret_sauce"></parameter>
         <classes>
-            <class name="Task10">
+            <class name="Task10.Task10">
                 <methods>
                     <include name="loginToApplication_Test"/>
                     <include name="testingProductPage_Test3"/>
@@ -62,7 +62,7 @@
         <parameter name="username" value="standard_user"></parameter>
         <parameter name="password" value="secret_sauce"></parameter>
         <classes>
-            <class name="Task10">
+            <class name="Task10.Task10">
                 <methods>
                     <include name="loginToApplication_Test"/>
                     <include name="testingCartPage_Test4"/>
@@ -78,7 +78,7 @@
         <parameter name="zipCode" value="123"></parameter>
         <parameter name="text" value="Your order has been dispatched, and will arrive just as fast as the pony can get there!"></parameter>
         <classes>
-            <class name="Task10">
+            <class name="Task10.Task10">
                 <methods>
                     <include name="loginToApplication_Test"/>
                     <include name="testingCheckoutPage_Test5"/>

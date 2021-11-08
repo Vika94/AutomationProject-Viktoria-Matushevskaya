@@ -1,3 +1,5 @@
+package Task10;
+
 import pageObject.saucedemo.*;
 import driver.BaseTest;
 import org.testng.annotations.BeforeClass;

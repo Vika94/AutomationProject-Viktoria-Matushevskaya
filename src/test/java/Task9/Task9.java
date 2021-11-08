@@ -1,3 +1,6 @@
+package Task9;
+
+import org.testng.Assert;
 import pageObject.saucedemo.*;
 import driver.BaseTest;
 import org.testng.annotations.BeforeClass;
