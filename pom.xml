@@ -20,7 +20,7 @@
         <testng.version>7.4.0</testng.version>
         <webdrivermanager.version>5.0.3</webdrivermanager.version>
         <cucumber.version>4.7.1</cucumber.version>
-        <suite>src/test/resources/Task16.xml</suite>
+        <suite/>
     </properties>
     <build>
         <plugins>
